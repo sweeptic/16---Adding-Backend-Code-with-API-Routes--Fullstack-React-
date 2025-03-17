@@ -5,7 +5,7 @@ export default function feedbackPage(props) {
   const [feedbackData, setFeedbackData] = useState();
 
   async function loadFeedbackHandler(id) {
-    const res = await fetch(`api/${id}`);
+    const res = await fetch(`api/feedback/${id}`);
     const data = await res.json();
     console.log('data', data.feedback);
     setFeedbackData(data.feedback);

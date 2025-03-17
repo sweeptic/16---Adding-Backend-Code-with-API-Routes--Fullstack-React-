@@ -1,4 +1,4 @@
-import { buildFeedbackPath, extractFeedback } from './feedback';
+import { buildFeedbackPath, extractFeedback } from '.';
 
 export default function loadFeedbackHandler(req, res) {
   if (req.method === 'DELETE') {
