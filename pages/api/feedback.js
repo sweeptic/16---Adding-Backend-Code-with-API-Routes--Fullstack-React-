@@ -4,13 +4,14 @@ import path from 'path';
 
 const handler = (req, res) => {
   if (req.method === 'POST') {
+    // NEXT will parse automatically
     const email = req.body.email;
     const feedbackText = req.body.text;
 
     const newFeedback = {
       id: new Date().toISOString(),
       email: email,
-      feedbackText: feedbackText,
+      text: feedbackText,
     };
 
     //   store that in a database or in a file
